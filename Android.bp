@@ -7,6 +7,7 @@ soong_namespace {
         "hardware/oplus",
         "vendor/oneplus/sm8350-common",
         "vendor/qcom/opensource/display",
+        "vendor/oplus/camera",
     ],
 }
 
@@ -5440,6 +5441,148 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libAlgoInterface",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libAlgoInterface.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.camera.postproc@1.0",
+                "libqdMetaData",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libmpbase",
+                "libGLESv3",
+                "libEGL",
+                "libnativewindow",
+                "libhidlbase",
+                "libAlgoProcess",
+                "libapsjpeg",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libAlgoInterface.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.camera.postproc@1.0",
+                "libqdMetaData",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libmpbase",
+                "libGLESv3",
+                "libEGL",
+                "libnativewindow",
+                "libhidlbase",
+                "libAlgoProcess",
+                "libapsjpeg",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libAlgoProcess",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libAlgoProcess.so",
+            ],
+            shared_libs: [
+                "android.hardware.graphics.mapper@4.0",
+                "android.hardware.graphics.common-V7-ndk",
+                "libgralloctypes",
+                "libqdMetaData",
+                "vendor.qti.hardware.display.mapper@4.0",
+                "libgralloc.qti",
+                "vendor.qti.hardware.camera.postproc@1.0",
+                "libosenseaidlhalclient",
+                "vendor.oplus.hardware.osense.client-V1-ndk_platform",
+                "libion",
+                "libapsjpeg",
+                "libapsexif",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libutilscallstack",
+                "libmpbase",
+                "libGLESv3",
+                "libEGL",
+                "libnativewindow",
+                "libhidlbase",
+                "libselinux",
+                "libexif-jpeg-aps",
+                "libextendfile",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libAlgoProcess.so",
+            ],
+            shared_libs: [
+                "android.hardware.graphics.mapper@4.0",
+                "android.hardware.graphics.common-V7-ndk",
+                "libgralloctypes",
+                "libqdMetaData",
+                "vendor.qti.hardware.display.mapper@4.0",
+                "libgralloc.qti",
+                "vendor.qti.hardware.camera.postproc@1.0",
+                "libosenseaidlhalclient",
+                "vendor.oplus.hardware.osense.client-V1-ndk_platform",
+                "libion",
+                "libapsjpeg",
+                "libapsexif",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libutilscallstack",
+                "libmpbase",
+                "libGLESv3",
+                "libEGL",
+                "libnativewindow",
+                "libhidlbase",
+                "libselinux",
+                "libexif-jpeg-aps",
+                "libextendfile",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libDeVIS",
     owner: "oneplus",
     strip: {
@@ -5466,6 +5609,199 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libdl",
                 "libc",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libPolarrRender",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libPolarrRender.so",
+            ],
+            shared_libs: [
+                "libGLESv3",
+                "liblog",
+                "libEGL",
+                "libz",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libPolarrRender.so",
+            ],
+            shared_libs: [
+                "libGLESv3",
+                "liblog",
+                "libEGL",
+                "libz",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libPreviewDecisionOld",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libPreviewDecisionOld.so",
+            ],
+            shared_libs: [
+                "libAlgoProcess",
+                "libAlgoInterface",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libPreviewDecisionOld.so",
+            ],
+            shared_libs: [
+                "libAlgoProcess",
+                "libAlgoInterface",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSNPE",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libSNPE.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "liblog",
+                "libc++_shared",
+                "libc",
+                "libm",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libSNPE.so",
+            ],
+            shared_libs: [
+                "libdl",
+                "liblog",
+                "libc++_shared",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libapsexif",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libapsexif.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libapsexif.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libapsjpeg",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libapsjpeg.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libapsjpeg.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -5511,6 +5847,41 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libexif-jpeg-aps",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libexif-jpeg-aps.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libexif-jpeg-aps.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libfastov_dsp",
     owner: "oneplus",
     strip: {
@@ -5539,6 +5910,82 @@ cc_prebuilt_library_shared {
                 "libcdsprpc",
                 "libm",
                 "libc",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmpbase",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libmpbase.so",
+            ],
+            shared_libs: [
+                "libc",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libmpbase.so",
+            ],
+            shared_libs: [
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libosenseaidlhalclient",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/odm/lib/libosenseaidlhalclient.so",
+            ],
+            shared_libs: [
+                "vendor.oplus.hardware.osense.client-V1-ndk_platform",
+                "libbase",
+                "libbinder_ndk",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libosenseaidlhalclient.so",
+            ],
+            shared_libs: [
+                "vendor.oplus.hardware.osense.client-V1-ndk_platform",
+                "libbase",
+                "libbinder_ndk",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -6175,88 +6622,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libAlgoInterface",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libAlgoInterface.so",
-            ],
-            shared_libs: [
-                "vendor.qti.hardware.camera.postproc@1.0",
-                "libqdMetaData",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libmpbase",
-                "libGLESv3",
-                "libEGL",
-                "libnativewindow",
-                "libhidlbase",
-                "libAlgoProcess",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libAlgoProcess",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libAlgoProcess.so",
-            ],
-            shared_libs: [
-                "android.hardware.graphics.mapper@4.0",
-                "android.hardware.graphics.common-V7-ndk",
-                "libgralloctypes",
-                "libqdMetaData",
-                "vendor.qti.hardware.display.mapper@4.0",
-                "libgralloc.qti",
-                "vendor.qti.hardware.camera.postproc@1.0",
-                "libosenseaidlhalclient",
-                "vendor.oplus.hardware.osense.client-V1-ndk_platform",
-                "libion",
-                "libapsjpeg",
-                "libapsexif",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libutilscallstack",
-                "libmpbase",
-                "libGLESv3",
-                "libEGL",
-                "libnativewindow",
-                "libhidlbase",
-                "libselinux",
-                "libexif-jpeg-aps",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libAncSegmentSdk",
     owner: "oneplus",
     strip: {
@@ -6574,62 +6939,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libPolarrRender",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libPolarrRender.so",
-            ],
-            shared_libs: [
-                "libGLESv3",
-                "liblog",
-                "libEGL",
-                "libz",
-                "libm",
-                "libdl",
-                "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libPreviewDecisionOld",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libPreviewDecisionOld.so",
-            ],
-            shared_libs: [
-                "libAlgoProcess",
-                "libAlgoInterface",
-                "liblog",
-                "libcutils",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libQnnHtpStub",
     owner: "oneplus",
     strip: {
@@ -6646,31 +6955,6 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libdl",
                 "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libSNPE",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libSNPE.so",
-            ],
-            shared_libs: [
-                "libdl",
-                "liblog",
-                "libc++_shared",
-                "libc",
-                "libm",
             ],
         },
     },
@@ -7118,54 +7402,6 @@ cc_prebuilt_library_shared {
                 "libm",
                 "libdl",
                 "libc",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libapsexif",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libapsexif.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libapsjpeg",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libapsjpeg.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
             ],
         },
     },
@@ -8140,30 +8376,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libexif-jpeg-aps",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libexif-jpeg-aps.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libgf_hal_G3",
     owner: "oneplus",
     strip: {
@@ -8289,27 +8501,6 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libmpbase",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libmpbase.so",
-            ],
-            shared_libs: [
-                "libc",
             ],
         },
     },
@@ -8502,36 +8693,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libhardware",
                 "vendor.oplus.hardware.orms@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libosenseaidlhalclient",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/odm/lib64/libosenseaidlhalclient.so",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.osense.client-V1-ndk_platform",
-                "libbase",
-                "libbinder_ndk",
-                "liblog",
-                "libutils",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
