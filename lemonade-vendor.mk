@@ -1077,6 +1077,9 @@ PRODUCT_PACKAGES += \
     odm_lib_rfsa_adsp_libvdblurless_skel_so \
     odm_lib_rfsa_adsp_libvdsuperphoto_skel_so \
     odm_lib_rfsa_adsp_libworker_pool_so \
+    libui-stock \
+    libutils-stock \
+    libsharebuffer_impl \
     manifest_oplus_cameraextension_aidl.xml \
     manifest_oplus_fingerprint.xml \
     vendor.oplus.hardware.biometrics.fingerprint@2.1-service \
