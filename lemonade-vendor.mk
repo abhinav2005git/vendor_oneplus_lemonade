@@ -922,8 +922,10 @@ PRODUCT_PACKAGES += \
     libexif-jpeg-aps \
     libfastov_dsp \
     libmpbase \
+    libmsnativefilter \
     libnightvision \
     libosenseaidlhalclient \
+    libextendfile \
     liblvimfs \
     liblvimfs_wrapper \
     anc.hal \
@@ -934,6 +936,7 @@ PRODUCT_PACKAGES += \
     com.qti.sensor.imx766.lemonade \
     com.arcsoft.node.eisv2 \
     com.arcsoft.node.smooth_transition \
+    com.oplus.node.pilot \
     com.oplus.node.preview \
     com.oplus.node.rtb \
     com.oplus.node.videoenhance \
@@ -953,6 +956,7 @@ PRODUCT_PACKAGES += \
     libFaceBeautyPICap \
     libFaceBeautyPre \
     libFaceDistortionCorrection \
+    libFilterWrapper \
     libImageWarpMask \
     libOGLManager \
     libOPLUS_SCPortrait \
@@ -977,6 +981,7 @@ PRODUCT_PACKAGES += \
     lib_oplus_starburst_capture \
     lib_oplus_starburst_preview \
     lib_rectify \
+    libaideblur \
     libaisal \
     libaisd \
     libaiseg \
