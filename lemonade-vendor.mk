@@ -906,6 +906,8 @@ PRODUCT_PACKAGES += \
     libsynx \
     libtfestriping \
     libthreadutils \
+    libui-stock \
+    libutils-stock \
     vendor.oplus.hardware.cammidasservice@1.0 \
     vendor.qti.hardware.camera.postproc@1.0-service-impl \
     libAlgoInterface \
@@ -920,10 +922,10 @@ PRODUCT_PACKAGES += \
     libexif-jpeg-aps \
     libfastov_dsp \
     libmpbase \
+    libnightvision \
     libosenseaidlhalclient \
     liblvimfs \
     liblvimfs_wrapper \
-    libnightvision \
     anc.hal \
     android.hardware.secure_element@1.0-impl \
     com.qti.sensor.gc02m1b.lemonade \
@@ -937,9 +939,16 @@ PRODUCT_PACKAGES += \
     com.oplus.node.videoenhance \
     fingerprint.goodix_G3.default \
     vendor.qti.esepowermanager@1.1-impl \
+    libAncFilter \
+    libAncHumBokehPost \
+    libAncHumanSegFigureFusion \
+    libAncSegBaseSdk \
     libAncSegmentSdk \
+    libBokehPre \
     libCOppLceTonemapAPI \
+    libCaptureBokeh \
     libEIS \
+    libFDClite \
     libFaceBeautyCap \
     libFaceBeautyPICap \
     libFaceBeautyPre \
@@ -947,10 +956,14 @@ PRODUCT_PACKAGES += \
     libImageWarpMask \
     libOGLManager \
     libOPLUS_SCPortrait \
+    libPerfectColor \
     libPerfectlyClearCrux \
     libPerfectlyClearCruxOpt \
     libQnnHtpStub \
+    libRedeyeReduce \
     libSNPE_G \
+    libSuperRaw \
+    libTrafficMode \
     libVDBayerHDR \
     libVDBlurless \
     libVDDualCameraBlurlessAPI \
@@ -965,6 +978,9 @@ PRODUCT_PACKAGES += \
     lib_oplus_starburst_preview \
     lib_rectify \
     libaisal \
+    libaisd \
+    libaiseg \
+    libalCFR \
     libancbase_segment \
     libaps_frame_registration \
     libapsdarksight \
@@ -987,6 +1003,7 @@ PRODUCT_PACKAGES += \
     libarcsoft_high_dynamic_range_couple_v4 \
     libarcsoft_high_dynamic_range_v4 \
     libarcsoft_lensstaindetection \
+    libarcsoft_long_exposure_capture \
     libarcsoft_low_light_hdr \
     libarcsoft_pic_best \
     libarcsoft_portraitSN_hvx_stub \
@@ -1005,6 +1022,7 @@ PRODUCT_PACKAGES += \
     libdualcam_image_optical_zoom \
     libdualcam_optical_zoom_control \
     libdualcam_video_optical_zoom \
+    libeffect_custom \
     libgf_hal_G3 \
     libhta \
     libhwconfigurationutil_odm \
@@ -1018,6 +1036,7 @@ PRODUCT_PACKAGES += \
     liboptical_zoom_vs \
     libormshalclient \
     libosensehalclient \
+    libsharebuffer_impl \
     libsnpe_dsp_domains_v2 \
     libsnpe_dsp_domains_v3 \
     libsnpe_htp \
@@ -1077,9 +1096,6 @@ PRODUCT_PACKAGES += \
     odm_lib_rfsa_adsp_libvdblurless_skel_so \
     odm_lib_rfsa_adsp_libvdsuperphoto_skel_so \
     odm_lib_rfsa_adsp_libworker_pool_so \
-    libui-stock \
-    libutils-stock \
-    libsharebuffer_impl \
     manifest_oplus_cameraextension_aidl.xml \
     manifest_oplus_fingerprint.xml \
     vendor.oplus.hardware.biometrics.fingerprint@2.1-service \
